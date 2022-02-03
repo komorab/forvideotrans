@@ -34,13 +34,14 @@ if __name__ == '__main__':
     count = 1
     Data = DataRecord(bili_url, file_path)
     while 1:
-        ctime = time.strftime("%H:%M:%S", time.localtime())
-        if ctime[-2:] == '00':
-            count -= 1
+        if count:
+            ctime = time.strftime("%S", time.localtime())
+            if ctime == '00':
+                count -= 1
         else:
             with open(file_path, 'r') as file:
                 data_load = list(json.load(file))
                 data_load.append(Data.time_follower_dict())
             with open(file_path, 'w') as f:
                 json.dump(data_load, f, indent=4)
-        time.sleep(600)
+            time.sleep(600)
