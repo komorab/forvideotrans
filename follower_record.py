@@ -4,7 +4,7 @@ import requests as r
 
 
 class DataRecord:
-    """to record the data of bilibili"""
+    """to record the data about xingtong"""
     def __init__(self, url, filename):
         self.url = url
         self.filename = filename
