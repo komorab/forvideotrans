@@ -26,9 +26,12 @@ class DataRecord:
         self.record[time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())] = follower
         return self.record
 
+
 bili_url = 'https://api.bilibili.com/x/relation/stat?vmid=401315430'
 file_path = 'D:/BVideoFiles/22886883-星瞳_Official/record_fans_num.json'
-'''get返回dict: {'code': 0, 'message': '0', 'ttl': 1,'data': {'mid': 401315430, 'following': 20, 'whisper': 0, 'black': 0,'follower': 160679}} '''
+'''get返回dict: {'code': 0, 'message': '0', 'ttl': 1,
+'data': {'mid': 401315430, 'following': 20, 'whisper': 0, 'black': 0,'follower': 160679}} '''
+
 
 if __name__ == '__main__':
     count = 1
