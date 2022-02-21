@@ -1,2 +1,2 @@
-# xzqnForXingtong
-method for xingtong
+# forvideotrans
+method for video trans
